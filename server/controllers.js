@@ -15,13 +15,9 @@ var controllers = {
 
     var markup = renderToString(
 
-      React.createElement(
-        Provider, {store: store}, React.createElement(App, {})
-      )
-
-      // <Provider store={store}>
-      //   <App />
-      // </Provider>
+      <Provider store={store}>
+        <App />
+      </Provider>
     );
 
     res.render('app', {
