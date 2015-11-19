@@ -1,7 +1,7 @@
-var React = require('react');
-var render = require('react-dom').render;
-var Provider = require('react-redux').Provider;
-var App = require('../containers/App');
+import React from 'react';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import App from '../containers/App';
 
 var initialState = {
   test: 'This is hella testing'
