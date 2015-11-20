@@ -1,7 +1,7 @@
 import { applyMiddleware, compose, createStore } from 'redux';
 import reducer from './reducer';
 import thunk from 'redux-thunk';
-import { devTools, persistState } from 'redux-devTools';
+import { devTools, persistState } from 'redux-devtools';
 
 var finalCreateStore;
 
@@ -13,7 +13,8 @@ var finalCreateStore;
 //   )(createStore);
 // } else {
   finalCreateStore = compose(
-    applyMiddleware(thunk)
+    applyMiddleware(thunk),
+    devTools()
   )(createStore);
 // }
 
