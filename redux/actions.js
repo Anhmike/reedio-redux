@@ -5,7 +5,7 @@ var actions = {
       type: 'UPDATE_TEXT',
       text: text
     };
-  },
+  }
 
 };
 
