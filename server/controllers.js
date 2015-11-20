@@ -1,7 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import App from '../containers/App';
-// var App = React.createFactory(require('../containers/App'));
 import { renderToString } from 'react-dom/server';
 
 var controllers = {
@@ -15,7 +14,6 @@ var controllers = {
     var store =  require('../redux/store')(initialState);
 
     var markup = renderToString(
-
       <Provider store={store}>
         <App />
       </Provider>

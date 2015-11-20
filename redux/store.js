@@ -1,22 +1,12 @@
 import { applyMiddleware, compose, createStore } from 'redux';
 import reducer from './reducer';
+import logger from 'redux-logger';
 import thunk from 'redux-thunk';
-import { devTools, persistState } from 'redux-devtools';
 
-var finalCreateStore;
 
-// if (window !== undefined) {
-//   finalCreateStore = compose(
-//     applyMiddleware(thunk),
-//     devTools(),
-//     persistState(window.location.href.match(/[?&]debug_session=([^&]+)\b/))
-//   )(createStore);
-// } else {
-  finalCreateStore = compose(
-    applyMiddleware(thunk),
-    devTools()
-  )(createStore);
-// }
+var finalCreateStore = compose(
+  applyMiddleware(thunk, logger()),
+)(createStore);
 
 var configureStore = function(initialState) {
   return finalCreateStore(reducer, initialState);

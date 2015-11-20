@@ -6,7 +6,7 @@ var Test = React.createClass({
 
     return (
       <div>
-        {this.props.test}!!!!
+        {this.props.test}!!
       </div>
     )
   }

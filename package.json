@@ -10,7 +10,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server --ignore client --ignore components --ignore containers"
+    "start": "nodemon server --ignore components --ignore containers"
   },
   "dependencies": {
     "babel-core": "^5.8.3",
@@ -27,8 +27,7 @@
     "react-redux": "^4.0.0",
     "react-transform-hmr": "^1.0.1",
     "redux": "^3.0.4",
-    "redux-devtools": "^2.1.5",
-    "redux-devtools-diff-monitor": "^3.0.0",
+    "redux-logger": "^2.0.4",
     "redux-thunk": "^1.0.0",
     "webpack": "^1.12.6",
     "webpack-dev-middleware": "^1.2.0",
