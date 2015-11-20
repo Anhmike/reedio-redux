@@ -1,6 +1,6 @@
-var connect = require('react-redux').connect;
-var React = require('react');
-var Test = require('../components/Test');
+import { connect } from 'react-redux';
+import React from 'react';
+import Test from '../components/Test';
 
 var App = React.createClass({
 

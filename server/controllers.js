@@ -1,7 +1,8 @@
-var React = require('react');
-var Provider = require('react-redux').Provider;
-var App = React.createFactory(require('../containers/App'));
-var renderToString = require('react-dom/server').renderToString;
+import React from 'react';
+import { Provider } from 'react-redux';
+import App from '../containers/App';
+// var App = React.createFactory(require('../containers/App'));
+import { renderToString } from 'react-dom/server';
 
 var controllers = {
 
