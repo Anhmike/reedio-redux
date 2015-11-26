@@ -2,21 +2,18 @@ import assign from 'object-assign';
 
 var reducer = function(state, action) {
   
-  state = state || initialState;
-
   switch (action.type) {
-    case 'UPDATE_TEXT':
+    case 'UPDATE_SONGS':
       return assign({}, state, {
-        test: action.text
+        songs: action.songs
       });
-
+    case 'TOGGLE_LOADING_SONGS':
+      return assign({}, state, {
+        loadingSongs: action.isLoading
+      });
     default:
       return state;
   }
-};
-
-var initialState = {
-  test: 'This is hella testing'
 };
 
 module.exports = reducer;

@@ -2,13 +2,16 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import App from '../containers/App';
 import { renderToString } from 'react-dom/server';
+import utils from './utils';
 
 var controllers = {
 
-  render: function(req, res) {
+  renderIndex: function(req, res) {
+
+    var songs = utils.fetchRandomSongs(3);
 
     var initialState = {
-      test: 'This is hella testing'
+      songs: songs
     };
 
     var store =  require('../redux/store')(initialState);
@@ -20,8 +23,16 @@ var controllers = {
     );
 
     res.render('app', {
-      markup: markup
+      markup: markup,
+      initialState: JSON.stringify(initialState)
     });
+  },
+
+  fetchSongs: function(req, res) {
+
+    var songs = utils.fetchRandomSongs(3);
+
+    res.status(200).json({songs: songs});
   }
 
 };

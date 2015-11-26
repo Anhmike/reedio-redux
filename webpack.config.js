@@ -22,7 +22,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        include: __dirname,
+        // include: __dirname,
         loader: 'babel-loader',
         query: {
           optional: [ 'runtime' ],

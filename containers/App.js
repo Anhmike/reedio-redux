@@ -1,19 +1,15 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import React from 'react';
-import Test from '../components/Test';
+import SongList from '../components/SongList';
 import * as actions from '../redux/actions';
 
 var App = React.createClass({
 
-  componentDidMount: function(){
-    //this.props.updateText('this is hella updated!');
-  },
-
   render: function() {
 
     return (
-      <Test test={this.props.test} cb={this.props.updateText}/>
+      <SongList songs={this.props.songs} fetchSongs={this.props.fetchSongs}/>
     )
   }
 });
